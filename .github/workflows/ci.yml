@@ -1,0 +1,20 @@
+name: CI Business Logic
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - run: ruff check src tests
+      - run: pytest -v --cov=src --cov-report=term-missing --cov-report=html --cov-fail-under=80
+      - run: python -m compileall -q src
+      # Agregado por el equipo: guarda el reporte HTML de cobertura de cada ejecución.
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cobertura-html
+          path: htmlcov/
