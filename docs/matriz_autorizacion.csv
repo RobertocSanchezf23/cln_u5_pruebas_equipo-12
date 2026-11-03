@@ -1,0 +1,9 @@
+﻿rol,es_propietario,estado_pedido,antiguedad,esperado,real,estado,prueba
+Propietario,Sí,NEW,1 h,Permitido,Permitido,PASA,test_owner_within_24h
+Tercero,No,NEW,0 h,Denegado,Denegado,PASA,test_stranger_denied
+Administrador,Sí,SHIPPED,0 h,Denegado,Denegado,PASA,test_shipped_denied_even_admin
+Propietario,Sí,NEW,25 h,Denegado,Denegado,PASA,test_expired_denied
+Administrador,No,NEW,48 h,Permitido,Permitido,PASA,test_admin_cancela_pedido_new_de_otro_usuario
+Propietario,Sí,NEW,24 h,Denegado,Denegado,PASA,test_propietario_exactamente_a_las_24h_se_rechaza
+Propietario,Sí,NEW,23 h 59 min 59 s,Permitido,Permitido,PASA,test_propietario_un_segundo_antes_de_24h_se_permite
+Tercero,No,CONFIRMED,1 h,Denegado,Denegado,PASA,test_tercero_no_admin_dentro_de_24h_se_rechaza

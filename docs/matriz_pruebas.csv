@@ -1,0 +1,16 @@
+﻿caso_id,pedido_id,accion,entrada,tipo,resultado_esperado,resultado_real,estado,prueba
+CP01,1,confirmar,"total=120, vip=0, deuda=0, estado=NEW",Éxito,"CONFIRMED, cobro 120.00","CONFIRMED, cobro 120.00",PASA,test_casos_csv.py::test_caso_del_csv[CP01]
+CP02,2,confirmar,"total=200, vip=1, deuda=0, estado=NEW",Éxito,"CONFIRMED, cobro 170.00","CONFIRMED, cobro 170.00",PASA,test_casos_csv.py::test_caso_del_csv[CP02]
+CP03,3,confirmar,"total=150, vip=0, deuda=500, estado=NEW",Error,CustomerHasDebt,CustomerHasDebt: outstanding debt,PASA,test_casos_csv.py::test_caso_del_csv[CP03]
+CP04,4,confirmar,"total=0, vip=0, deuda=0, estado=NEW",Límite,ValueError,ValueError: total must be positive,PASA,test_casos_csv.py::test_caso_del_csv[CP04]
+CP05,5,confirmar,"total=-10, vip=0, deuda=0, estado=NEW",Error,ValueError,ValueError: total must be positive,PASA,test_casos_csv.py::test_caso_del_csv[CP05]
+CP06,6,confirmar,"total=1000, vip=1, deuda=0, estado=NEW",Éxito,"CONFIRMED, cobro 850.00","CONFIRMED, cobro 850.00",PASA,test_casos_csv.py::test_caso_del_csv[CP06]
+CP07,7,confirmar,"total=0.01, vip=1, deuda=0, estado=NEW",Límite,"CONFIRMED, cobro 0.01","CONFIRMED, cobro 0.01",PASA,test_casos_csv.py::test_caso_del_csv[CP07]
+CP08,8,confirmar,"total=250, vip=0, deuda=0, estado=CONFIRMED",Error,OrderAlreadyConfirmed (ValueError): already confirmed,OrderAlreadyConfirmed: already confirmed,PASA,test_casos_csv.py::test_caso_del_csv[CP08]
+CP09,9,confirmar,"total=300, vip=1, deuda=0, estado=NEW",Éxito,"CONFIRMED, cobro 255.00","CONFIRMED, cobro 255.00",PASA,test_casos_csv.py::test_caso_del_csv[CP09]
+CP10,10,confirmar,"total=75, vip=0, deuda=0, estado=NEW",Éxito,"CONFIRMED, cobro 75.00","CONFIRMED, cobro 75.00",PASA,test_casos_csv.py::test_caso_del_csv[CP10]
+CP11,11,confirmar,"total=500, vip=1, deuda=250, estado=NEW",Error,CustomerHasDebt,CustomerHasDebt: outstanding debt,PASA,test_casos_csv.py::test_caso_del_csv[CP11]
+CP12,12,confirmar,"total=99.99, vip=1, deuda=0, estado=NEW",Límite,"CONFIRMED, cobro 84.99","CONFIRMED, cobro 84.99",PASA,test_casos_csv.py::test_caso_del_csv[CP12]
+CP13,,pago rechazado,"Order(100), mock charge -> False",Error,RuntimeError: payment rejected,RuntimeError: payment rejected,PASA,test_service.py::test_gateway_rejected
+CP14,,persistencia commit,"save(1, Order(120)) + commit",Éxito,Registro visible después de commit,Registro visible después de commit,PASA,test_repository.py::test_repository_commit
+CP15,,persistencia rollback,"save(1, Order(120)) + rollback",Error,Registro ausente después de rollback,Registro ausente después de rollback,PASA,test_repository.py::test_repository_rollback

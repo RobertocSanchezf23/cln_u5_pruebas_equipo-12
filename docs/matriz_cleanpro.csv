@@ -1,0 +1,19 @@
+﻿caso_id,regla,servicio,entrada,tipo,resultado_esperado,resultado_real,estado
+CLN-CP01,R1 RB-02,CLN-O001,"Cliente activo, cotización aceptada, 2 servicios",Éxito,PROGRAMADO,PROGRAMADO,PASA
+CLN-CP02,R1 RB-02,CLN-O008,Cotización no aceptada (autorizado=0),Error,ServicioNoProgramable,ServicioNoProgramable: RB-02: no se puede programar: el cliente no ha aceptado la cotización,PASA
+CLN-CP03,R1 precondición,CLN-O022,Cliente C007 inactivo,Error,ServicioNoProgramable,ServicioNoProgramable: PIA-precondición: no se puede programar: el cliente está inactivo,PASA
+CLN-CP04,R1 precondición,CLN-O013,Solicitud con 0 servicios,Límite,ServicioNoProgramable,ServicioNoProgramable: PIA-precondición: no se puede programar: la solicitud no tiene servicios en el detalle,PASA
+CLN-CP05,R1 precondición,CLN-O005,Incluye P011 deshabilitado,Error,ServicioNoProgramable,ServicioNoProgramable: PIA-precondición: no se puede programar: incluye un servicio deshabilitado en el catálogo,PASA
+CLN-CP06,R2 RB-07,CLN-O006,"Programar, iniciar y completar",Éxito,Factura 2840.00,Factura 2840.00,PASA
+CLN-CP07,R2 RB-07,CLN-O007,Facturar estando PROGRAMADO,Error,FacturacionNoPermitida,FacturacionNoPermitida: RB-07: solo se factura un servicio terminado (estado: PROGRAMADO),PASA
+CLN-CP08,R2 RB-11,CLN-O003,"Acceso denegado tras 15 min (1,491.00)",Límite,Factura 745.50,Factura 745.50,PASA
+CLN-CP09,R2 RB-11,CLN-O004,Acceso denegado tras 14 min,Límite,TransicionInvalida,TransicionInvalida: RB-11: se debe esperar al menos 15 minutos (se esperaron 14),PASA
+CLN-CP10,R3 RB-14,CLN-O010,Cargo 350.00 autorizado por coordinador,Éxito,Factura 7095.00,Factura 7095.00,PASA
+CLN-CP11,R3 RB-14,CLN-O011,Cargo 500.00 sin autorizar,Error,FacturacionNoPermitida,FacturacionNoPermitida: RB-14: hay cargos adicionales sin autorizar,PASA
+CLN-CP12,R3 RB-15,CLN-O012,Supervisor intenta autorizar cargo,Error,AutorizacionDenegada,AutorizacionDenegada: RB-15: solo el coordinador autoriza cargos adicionales (rol: SUPERVISOR),PASA
+CLN-CP13,R3 RB-14,CLN-O014,Cargo de 0.01 sin autorizar,Límite,FacturacionNoPermitida,FacturacionNoPermitida: RB-14: hay cargos adicionales sin autorizar,PASA
+CLN-CP14,Persistencia,CLN-O001,Programar y hacer commit,Integración,PROGRAMADO guardado,PROGRAMADO guardado; avisos=1; pendientes=0,PASA
+CLN-CP15,Persistencia,CLN-O002,Guardar y hacer rollback,Integración,no guardado,no guardado tras rollback,PASA
+CLN-CP16,Mock notificador,CLN-O001,Aviso al cliente al programar,Integración,avisos=1,PROGRAMADO guardado; avisos=1; pendientes=0,PASA
+CLN-CP17,Mock notificador,CLN-O008,Regla falla: no guarda ni avisa,Integración,ServicioNoProgramable; guardado=False,ServicioNoProgramable; guardado=False,PASA
+CLN-CP18,Mock notificador,CLN-O006,Falla el aviso (timeout),Integración,pendientes=1,PROGRAMADO guardado; avisos=1; pendientes=1,PASA

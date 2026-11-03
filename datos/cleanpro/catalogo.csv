@@ -1,0 +1,21 @@
+﻿recurso_id,descripcion,precio_mxn,capacidad_o_stock,habilitado
+CLN-P001,Hogar 01,497.00,13,1
+CLN-P002,Oficina 02,568.00,16,1
+CLN-P003,Profunda 03,639.00,19,1
+CLN-P004,Industrial 04,710.00,22,1
+CLN-P005,Hogar 05,781.00,25,1
+CLN-P006,Oficina 06,852.00,28,1
+CLN-P007,Profunda 07,923.00,31,1
+CLN-P008,Industrial 08,994.00,34,1
+CLN-P009,Hogar 09,1065.00,37,1
+CLN-P010,Oficina 10,1136.00,40,1
+CLN-P011,Profunda 11,1207.00,43,0
+CLN-P012,Industrial 12,1278.00,46,1
+CLN-P013,Hogar 13,1349.00,49,1
+CLN-P014,Oficina 14,1420.00,52,1
+CLN-P015,Profunda 15,1491.00,10,1
+CLN-P016,Industrial 16,1562.00,13,1
+CLN-P017,Hogar 17,1633.00,16,1
+CLN-P018,Oficina 18,1704.00,19,1
+CLN-P019,Profunda 19,1775.00,22,1
+CLN-P020,Industrial 20,1846.00,25,1

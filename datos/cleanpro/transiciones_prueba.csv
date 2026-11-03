@@ -1,0 +1,21 @@
+﻿caso_id,operacion_id,accion_sugerida,estado_inicial,resultado_alumno,instrucciones
+CLN-S001,CLN-O001,completar,SOLICITADO,PENDIENTE,Ejecutar la operacion y registrar evento o excepcion
+CLN-S002,CLN-O002,cancelar,SOLICITADO,PENDIENTE,Ejecutar la operacion y registrar evento o excepcion
+CLN-S003,CLN-O003,repetir_aprobacion,SOLICITADO,PENDIENTE,Ejecutar la operacion y registrar evento o excepcion
+CLN-S004,CLN-O004,saltar_estado,SOLICITADO,PENDIENTE,Ejecutar la operacion y registrar evento o excepcion
+CLN-S005,CLN-O005,aprobar,SOLICITADO,PENDIENTE,Ejecutar la operacion y registrar evento o excepcion
+CLN-S006,CLN-O006,completar,SOLICITADO,PENDIENTE,Ejecutar la operacion y registrar evento o excepcion
+CLN-S007,CLN-O007,cancelar,SOLICITADO,PENDIENTE,Ejecutar la operacion y registrar evento o excepcion
+CLN-S008,CLN-O008,repetir_aprobacion,SOLICITADO,PENDIENTE,Ejecutar la operacion y registrar evento o excepcion
+CLN-S009,CLN-O009,saltar_estado,SOLICITADO,PENDIENTE,Ejecutar la operacion y registrar evento o excepcion
+CLN-S010,CLN-O010,aprobar,SOLICITADO,PENDIENTE,Ejecutar la operacion y registrar evento o excepcion
+CLN-S011,CLN-O011,completar,SOLICITADO,PENDIENTE,Ejecutar la operacion y registrar evento o excepcion
+CLN-S012,CLN-O012,cancelar,SOLICITADO,PENDIENTE,Ejecutar la operacion y registrar evento o excepcion
+CLN-S013,CLN-O013,repetir_aprobacion,SOLICITADO,PENDIENTE,Ejecutar la operacion y registrar evento o excepcion
+CLN-S014,CLN-O014,saltar_estado,SOLICITADO,PENDIENTE,Ejecutar la operacion y registrar evento o excepcion
+CLN-S015,CLN-O015,aprobar,SOLICITADO,PENDIENTE,Ejecutar la operacion y registrar evento o excepcion
+CLN-S016,CLN-O016,completar,SOLICITADO,PENDIENTE,Ejecutar la operacion y registrar evento o excepcion
+CLN-S017,CLN-O017,cancelar,SOLICITADO,PENDIENTE,Ejecutar la operacion y registrar evento o excepcion
+CLN-S018,CLN-O018,repetir_aprobacion,SOLICITADO,PENDIENTE,Ejecutar la operacion y registrar evento o excepcion
+CLN-S019,CLN-O019,saltar_estado,SOLICITADO,PENDIENTE,Ejecutar la operacion y registrar evento o excepcion
+CLN-S020,CLN-O020,aprobar,SOLICITADO,PENDIENTE,Ejecutar la operacion y registrar evento o excepcion
