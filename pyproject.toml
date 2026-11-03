@@ -1,0 +1,14 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# Permite que "pytest" (sin "python -m") encuentre el paquete src, como ocurre en GitHub Actions.
+pythonpath = ["."]
+
+[tool.coverage.run]
+source = ["src"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+# Reglas fijas para que el resultado no cambie con cada versión nueva de ruff.
+select = ["E", "F", "I"]
